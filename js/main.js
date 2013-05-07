@@ -18,19 +18,11 @@ define(function (require) {
         });
     }
 
-    try {
-        activity.getXOColor(function (data) {
-            iconInfo.strokeColor = data[0];
-            iconInfo.fillColor = data[1];
-            colorizeActivityIcon(iconInfo);
-        });
-    }
-    catch (err) {
-        // Sugar API not available, use sample colors:
-        iconInfo.strokeColor = "#00A0FF";
-        iconInfo.fillColor = "#8BFF7A";
+    activity.getXOColor(function (data) {
+        iconInfo.strokeColor = data[0];
+        iconInfo.fillColor = data[1];
         colorizeActivityIcon(iconInfo);
-    }
+    });
 
     // Make the activity stop with the stop button.
 
