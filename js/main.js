@@ -3,6 +3,10 @@ define(function (require) {
     var activity = require("sugar-html-core/activity");
     var icons = require("sugar-html-graphics/icons");
 
+    // Initialize the activity.
+
+    activity.setup();
+
     // Colorize the activity icon.
 
     var activityIcon = document.getElementById("activity-button")
