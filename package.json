@@ -4,7 +4,8 @@
     "baseUrl": "lib",
     "dependencies": {
       "sugar-html-core": "github:sugarlabs/sugar-html-core/master",
-      "sugar-html-graphics": "github:sugarlabs/sugar-html-graphics/master"
+      "sugar-html-graphics": "github:sugarlabs/sugar-html-graphics/master",
+      "domReady": "github:requirejs/domReady/2.0.1"
     }
   }
 }

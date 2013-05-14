@@ -2,22 +2,24 @@ define(function (require) {
     var activity = require("sugar-html-core/activity");
     var icons = require("sugar-html-graphics/icons");
 
-    // Initialize the activity.
+    // Manipulate the DOM only when it is ready.
+    require(['domReady!'], function (doc) {
 
-    activity.setup();
+        // Initialize the activity.
+        activity.setup();
 
-    // Colorize the activity icon.
+        // Colorize the activity icon.
+        var activityButton = document.getElementById("activity-button");
+        activity.getXOColor(function (colors) {
+            icons.colorize(activityButton, colors);
+        });
 
-    var activityButton = document.getElementById("activity-button");
-    activity.getXOColor(function (colors) {
-        icons.colorize(activityButton, colors);
+        // Make the activity stop with the stop button.
+        var stopButton = document.getElementById("stop-button");
+        stopButton.onclick = function () {
+            activity.close();
+        };
+
     });
-
-    // Make the activity stop with the stop button.
-
-    var stopButton = document.getElementById("stop-button");
-    stopButton.onclick = function () {
-        activity.close();
-    };
 
 });
