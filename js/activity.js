@@ -1,6 +1,6 @@
 define(function (require) {
-    var activity = require("sugar-html-activity/activity");
-    var icon = require("sugar-html-graphics/icon");
+    var activity = require("sugar-web/activity/activity");
+    var icon = require("sugar-web/graphics/icon");
 
     // Manipulate the DOM only when it is ready.
     require(['domReady!'], function (doc) {
