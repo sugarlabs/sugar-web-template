@@ -10,7 +10,7 @@ define(function (require) {
 
         // Colorize the activity icon.
         var activityButton = document.getElementById("activity-button");
-        activity.getXOColor(function (colors) {
+        activity.getXOColor(function (error, colors) {
             icon.colorize(activityButton, colors);
         });
 
