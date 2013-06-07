@@ -16,7 +16,7 @@ define(function (require) {
 
         // Make the activity stop with the stop button.
         var stopButton = document.getElementById("stop-button");
-        stopButton.onclick = function () {
+        stopButton.addEventListener('click', function (e) {
             activity.close();
         };
 
