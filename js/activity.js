@@ -18,7 +18,7 @@ define(function (require) {
         var stopButton = document.getElementById("stop-button");
         stopButton.addEventListener('click', function (e) {
             activity.close();
-        };
+        });
 
     });
 
